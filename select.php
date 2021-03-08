@@ -62,7 +62,7 @@ if(isset($_POST['submit']))
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking System</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/table.css">
@@ -75,8 +75,8 @@ if(isset($_POST['submit']))
   include 'nav.php';
 ?>
 
-	<div class="part2">
-        <h3">Transaction</h3>
+	<div class="container">
+        <h3 class="text-center pt-4">Transaction</h3>
             <?php
                 include 'connect.php';
                 $sid=$_GET['cid'];
@@ -90,18 +90,18 @@ if(isset($_POST['submit']))
             ?>
             <form method="post" name="tcredit" class="tabletext" ><br>
         <div>
-            <table class="part3">
+            <table class="table table-striped table-condensed table-bordered">
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Balance</th>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Balance</th>
                 </tr>
-                <tr class='p5'>
-                    <td class="p4"><?php echo $rows['cid'] ?></td>
-                    <td class="p4"><?php echo $rows['name'] ?></td>
-                    <td class="p4"><?php echo $rows['email'] ?></td>
-                    <td class="p4"><?php echo $rows['balance'] ?></td>
+                <tr>
+                    <td class="py-2"><?php echo $rows['cid'] ?></td>
+                    <td class="py-2"><?php echo $rows['name'] ?></td>
+                    <td class="py-2"><?php echo $rows['email'] ?></td>
+                    <td class="py-2"><?php echo $rows['balance'] ?></td>
                 </tr>
             </table>
         </div>
@@ -133,10 +133,10 @@ if(isset($_POST['submit']))
         <br>
         <br>
             <label>Amount:</label>
-            <input type="number" class="part6" name="amt" required>   
+            <input type="number" class="form-control" name="amt" required>   
             <br><br>
                 <div >
-            <button class="btn" name="submit" type="submit" id="btn">Send</button>
+            <button class="btn mt-3" name="submit" type="submit" id="mybtn">Send</button>
             </div>
         </form>
     </div>
