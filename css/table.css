@@ -1,0 +1,27 @@
+.part2 {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #e2dddd;
+}
+
+.p5:hover {
+  background-color: #b3b0b0;
+}
+.btn {
+  transition: 1.5s;
+}
+.btn:hover {
+  background-color: #616c6f;
+  color: white;
+}
